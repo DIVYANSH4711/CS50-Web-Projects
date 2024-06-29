@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Clone</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Times New Roman", Times, serif, cursive;
+        background-color: white;
+        box-sizing: border-box;
+      }
+
+      .nav {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        /* background-color: #939185; */
+      }
+
+      .button {
+        width: 50px;
+        height: 50px;
+        border: 1px solid silver;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .button:hover {
+        box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+        border-color: #79c2d0;
+      }
+
+      #main-google {
+        width: 30px;
+        position: relative;
+        top: 2px;
+      }
+
+      .image {
+        width: 272px;
+        height: 92px;
+        margin: 20px auto;
+      }
+
+      .search-bar {
+        display: flex;
+        margin: 0 auto;
+        width: 590px;
+        height: 44px;
+        padding: 4px 15px;
+        border: 1px solid silver;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+      }
+
+      .search-bar:hover {
+        box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+        border-color: rgba(223, 225, 229, 0);
+      }
+
+      .search-icon,
+      .search-image {
+        width: 44px;
+        height: 35px;
+        /* background-color: pink; */
+      }
+
+      .search-bar-input {
+        height: 35px;
+        width: 444px;
+        padding: 5px 10px;
+        /* background-color: lightgreen; */
+      }
+
+      textarea {
+        width: 100%;
+        height: 25px;
+        resize: none;
+        border-color: transparent;
+        font-size: 17px;
+        font-family: sans-serif;
+      }
+
+      textarea:focus {
+        outline: none;
+      }
+
+      .Advanced-search {
+        width: 34px;
+        height: 35px;
+        /* background-color: lightgray; */
+      }
+
+      .submit-section {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      input[type="submit"] {
+        background-color: #f8f9fa;
+        border: 1px solid #f8f9fa;
+        border-radius: 4px;
+        color: #3c4043;
+        font-family: arial, sans-serif;
+        font-size: 14px;
+        margin: 11px 4px;
+        padding: 0 16px;
+        line-height: 27px;
+        height: 36px;
+        min-width: 54px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      input[type="submit"]:hover {
+        border: 1px solid silver;
+      }
+
+      .submit-section {
+        position: relative;
+        left: 100px;
+        top: 20px;
+        width: 500px;
+        height: 200px;
+        margin: 0 auto;
+      }
+
+      #magnifying-glass {
+        width: 33px;
+        margin-left: -3px;
+      }
+
+      #image-icon {
+        width: 25px;
+        position: relative;
+        top: 5px;
+        left: 6px;
+      }
+
+      #advanced-search-icon {
+        width: 25px;
+        position: relative;
+        top: 5px;
+        left: 6px;
+      }
+
+      #Advanced-search-icon:hover,
+      #magnifying-glass:hover,
+      #image-icon:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="button">
+        <a href="index.html"
+          ><abbr title="Google.com"
+            ><img
+              id="main-google"
+              src="https://www.vectorlogo.zone/logos/google/google-tile.svg"
+              alt="Google.com" /></abbr
+        ></a>
+      </div>
+      <div style="width: 50px; height: 60px"></div>
+    </div>
+    <div class="image">
+      <img
+        src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+        alt="Google"
+        width="272px"
+        height="92px"
+      />
+      <p style="position: relative; left: 245px; bottom: 20px; color: blue">
+        Images
+      </p>
+    </div>
+    <div class="search">
+      <form method="get" action="https://images.google.com/images">
+        <div class="search-bar">
+          <div class="search-icon">
+            <a href="#textarea"
+              ><img
+                src="https://i.pinimg.com/originals/19/65/ab/1965ab7ef7de87fe748b3c66efbfc73a.jpg"
+                alt="magnifying-glass"
+                id="magnifying-glass"
+            /></a>
+          </div>
+
+          <div class="search-bar-input">
+            <textarea name="q" id="textarea"></textarea>
+          </div>
+
+          <div class="search-image">
+            <a href="google-images.html"
+              ><abbr title="Search By Image"
+                ><img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmsV-S9rFmtKWivCc6HKZwVvKAhJU_UPEvAg&s"
+                  alt="magnifying-glass"
+                  id="image-icon" /></abbr
+            ></a>
+          </div>
+
+          <div class="Advanced-search">
+            <a href="Advanced-Search.html"
+              ><abbr title="Search By 'Advanced Search'"
+                ><img
+                  src="https://img.icons8.com/?size=100&id=123408&format=png&color=000000"
+                  alt="magnifying-glass"
+                  id="advanced-search-icon" /></abbr
+            ></a>
+          </div>
+        </div>
+        <div class="submit-section">
+          <input type="submit" name="btnK" value="Google Search" />
+          <div style="width: 100px"></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

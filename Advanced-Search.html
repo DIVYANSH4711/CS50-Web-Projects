@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Search</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      .nav {
+        width: 100%;
+        height: 60px;
+        /* background-color: gray; */
+        display: flex;
+        padding-left: 30px;
+        padding-right: 30px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        width: 100px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: wheat; */
+      }
+
+      .main-page {
+        width: 50px;
+        height: 50px;
+        background-color: #2f3645;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+      .main-page img {
+        position: relative;
+        top: 2px;
+        border-radius: 50%;
+      }
+
+      .search-bar {
+        width: 80%;
+        margin: 0 auto;
+        height: 270px;
+        /* background-color: pink; */
+        padding: 25px;
+      }
+
+      .field {
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: space-around;
+        gap: 5%;
+        margin-bottom: 10px;
+      }
+      .field.field:last-of-type {
+        margin-bottom: 30px;
+      }
+
+      label {
+        width: 25%;
+        /* background-color: gray; */
+        position: relative;
+        top: 5px;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        opacity: 0.9;
+      }
+
+      input[type="text"] {
+        width: 500px;
+        font-size: 18px;
+      }
+      input[type="text"]:focus {
+        outline:rgb(0, 0, 0, 0.3);
+        padding-left: 3px;
+      }
+      input[type="submit"] {
+        margin-top: 50px;
+        width: 100%;
+        height: 30px;
+        background-color: #3fa2f6;
+        color: white;
+        border: 1px solid rgb(0, 0, 0, 0.3);
+        position: relative;
+        left: 400%;
+      }
+      input[type="submit"]:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="logo">
+        <img
+          src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+          alt="logo"
+          width="90px"
+          height="30px"
+        />
+      </div>
+      <div class="main-page">
+        <abbr title="Main Page"
+          ><a href="index.html"
+            ><img
+              src="https://www.vectorlogo.zone/logos/google/google-tile.svg"
+              alt="main-page"
+              width="35px" /></a
+        ></abbr>
+      </div>
+    </div>
+    <h2
+      style="
+        font-weight: 1;
+        margin-left: 30px;
+        color: orangered;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      "
+    >
+      Advanced Search
+    </h2>
+    <hr style="display: flex; width: 94%; margin-left: 3%; opacity: 0.6" />
+    <form action="https://google.com/search" method="GET">
+      <div class="search-bar">
+        <div class="field">
+          <label for="field-1">All these words:</label>
+          <input type="text" name="as_q" id="field-1" />
+          <p width="700px"></p>
+        </div>
+        <div class="field">
+          <label for="field-2">this exact word or phrase:</label>
+          <input type="text" name="as_epq" id="field-2" />
+          <p width="700px"></p>
+        </div>
+        <div class="field">
+          <label for="field-3">any of these words:</label>
+          <input type="text" name="as_oq" id="field-3" />
+          <p width="700px"></p>
+        </div>
+        <div class="field">
+          <label for="field-4">none of these words:</label>
+          <input type="text" name="as_eq" id="field-4" />
+          <p width="700px"></p>
+        </div>
+        <div style="width: 130px; height: 50px; border: 1px solidsilver">
+          <input type="submit" value="Advanced Search" />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
